@@ -1,15 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
+  weight: ["400", "700"], // Add any combination of legal weights as strings
+
+  subsets: ["arabic"],
+  variable: "--font-ibm-plex-sans-arabic",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
 export const metadata = {
   title: "Create Next App",
@@ -18,11 +22,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="ar" dir="rtl" data-theme="light">
+      <body className={`${ibmPlexSansArabic.variable} antialiased`}>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
