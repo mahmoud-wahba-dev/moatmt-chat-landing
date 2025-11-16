@@ -17,7 +17,7 @@ const Footer = () => {
       links: [
         { label: "من نحن", href: "#" },
         { label: "الاسئلة الشائعة", href: "#" },
-        { label: "الشروط والأحكام", href: "#" },
+        { label: "الشروط والأحكام", href: "/terms" },
         { label: "المدونة", href: "#" },
         { label: "الأسعار", href: "#" },
         { label: "المزايا", href: "#" },
@@ -110,7 +110,7 @@ const Footer = () => {
             {col.links.map((link, linkIndex) => (
               <Link
                 key={linkIndex}
-                href="#"
+                href={link.href}
                 className="link link-hover text-base font-semibold mb-4"
               >
                 {link.label}

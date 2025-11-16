@@ -36,7 +36,7 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <Link href="/">الرئيسية</Link>
+                  <Link href="">الرئيسية</Link>
                 </li>
 
                 <li>
@@ -59,13 +59,13 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
-                  <a>الرئيسية</a>
+                  <Link href="/">الرئيسية</Link>
                 </li>
                 <li>
                   <Link href="/">كيف يشتغل مؤتمت؟</Link>
                 </li>
                 <li>
-                  <a>الأسعار</a>
+                  <Link href="">الأسعار</Link>
                 </li>
               </ul>
             </div>

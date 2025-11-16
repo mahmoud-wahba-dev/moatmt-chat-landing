@@ -72,7 +72,7 @@
     padding-right: 30px;
   } */
 
-  .center {
+  .center_flex {
     @apply flex justify-center items-center;
   }
 
