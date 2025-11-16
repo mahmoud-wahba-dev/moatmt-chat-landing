@@ -18,7 +18,7 @@ const Footer = () => {
         { label: "من نحن", href: "#" },
         { label: "الاسئلة الشائعة", href: "#" },
         { label: "الشروط والأحكام", href: "/terms" },
-        { label: "المدونة", href: "#" },
+        { label: "المدونة", href: "/blog" },
         { label: "الأسعار", href: "#" },
         { label: "المزايا", href: "#" },
       ],
