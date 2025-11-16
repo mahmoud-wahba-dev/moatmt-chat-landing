@@ -23,6 +23,7 @@ export default function DetailsClient({ posts = [] }) {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        سسسسسسسسسسسس
       {/* Sidebar: 4 cols */}
       <aside className="lg:col-span-4 space-y-4">
         <div className="text-sm font-semibold text-[#0F172B] mb-2 text-end">آخر المقالات</div>
