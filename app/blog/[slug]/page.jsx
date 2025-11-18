@@ -57,7 +57,7 @@ export default async function PostPage({ params }) {
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-6">
         <div className="sm:col-span-8">
           {/* static content from Figma / screenshot */}
-          <section className="bg-white p-8 ">
+          <section className="bg-white p-8 relative">
             <header className="mb-6 ">
               <h1 className="text-32px font-bold text-black mb-6">
                 تطبيق مؤتمت اختيار التجار
@@ -93,9 +93,10 @@ export default async function PostPage({ params }) {
                 لعملائك عبر واتساب، مثل: "تم شحن طلبك" أو "تم إلغاء الطلب".
               </p>
 
-                <h2 className="font-bold text-32px text-black mb-8 mt-7">كيف يساعدك مؤتمت في تحسين خدمة العملاء وزيادة المبيعات؟</h2>
+              <h2 className="font-bold text-32px text-black mb-8 mt-7">
+                كيف يساعدك مؤتمت في تحسين خدمة العملاء وزيادة المبيعات؟
+              </h2>
               <div className="mt-6 mb-8 font-normal text-24px text-black space-y-2">
-
                 <p>
                   في زمن السرعة، العميل لا يحب الانتظار. الرد السريع يجب أن يكون
                   الفارق بين عميل مشتري وعميل يغادر إلى المنافس. وهنا يبرز دور
@@ -137,7 +138,9 @@ export default async function PostPage({ params }) {
                   مهيكلة ووسائط متعددة (صور، منتجات، أزرار) داخل واتساب.
                 </p>
 
-                <h3 className="font-semibold text-20px mt-4">تشغيل سهل وسريع</h3>
+                <h3 className="font-semibold text-20px mt-4">
+                  تشغيل سهل وسريع
+                </h3>
                 <p>
                   تطبيق مؤتمت لا يتطلب إعدادات معقدة. كل ما عليك هو ربط متجرك
                   وإعداد القوالب الأساسية، وسيكون النظام يقوم بالباقي تلقائيًا.
@@ -150,6 +153,16 @@ export default async function PostPage({ params }) {
                 مؤتمت هو المستقبل لخدمة العملاء في التجارة الإلكترونية: أتمتة
                 ذكية، تكامل مرن، وتحسين في تجربة العميل بجهد أقل.
               </p>
+            </div>
+
+            <div className="absolute top-[50%] start-0 -translate-y-1/2 z-10  pointer-events-none select-none">
+              <Image
+                src="/blog/blog_bg.webp"
+                alt="Blog Background"
+                width={1074}
+                height={639}
+                className=" "
+              />
             </div>
           </section>
         </div>

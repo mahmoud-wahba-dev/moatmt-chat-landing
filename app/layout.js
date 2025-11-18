@@ -1,5 +1,7 @@
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
+// If you install keen-slider, uncomment the next line:
+// import "keen-slider/keen-slider.min.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 

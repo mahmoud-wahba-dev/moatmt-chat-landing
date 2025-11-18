@@ -66,11 +66,11 @@
    Container Styles
 ======================== */
 @layer utilities {
-  /* .container {
+  .container {
     @apply w-full mx-auto max-w-full;
     padding-left: 30px;
     padding-right: 30px;
-  } */
+  }
 
   .center_flex {
     @apply flex justify-center items-center;
@@ -103,6 +103,7 @@
   --text-32px: 2rem; /* 32px */
   --text-36px: 2.25rem; /* 36px */
   --text-40px: 2.5rem; /* 40px */
+  --text-45px: 2.8125rem; /* 45px */
   --text-48px: 3rem; /* 48px */
   --text-52px: 3.25rem; /* 52px */
 
@@ -124,5 +125,9 @@
   --radius-22px: 1.375rem; /* 22px */
   --radius-24px: 1.5rem; /* 24px */
   --radius-30px: 1.875rem; /* 30px */
+  --radius-40px: 2.5rem; /* 40px */
+  --radius-44px: 2.75rem; /* 44px */
+  --radius-58px: 3.625rem; /* 58px */
+  --radius-65px: 4.0625rem; /* 65px */
   --radius-66px: 4.125rem; /* 66px */
 }
