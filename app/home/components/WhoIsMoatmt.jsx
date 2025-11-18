@@ -18,18 +18,13 @@ const WhoIsMoatmt = () => {
           عملاءك لحظيًا وبدون تدخل يدوي. سواء كنت:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          <div>
+          <div className="hover-3d">
             <div
-              className="h-full rounded-58px shadow-[0px_0px_6.5px_1px_#00000040]
+              className=" h-full rounded-58px shadow-[0px_0px_6.5px_1px_#00000040]
 p-12"
             >
               <div>
-                {/* <CircleIcon /> */}
-                {/* <div className="size-[75px] center_flex bg-secondary rounded-40px mb-6">
-                  <PiShoppingBag className="size-8 text-primary" />
-                </div> */}
                 <CircleIcon icon={PiShoppingBag} sizeClass="size-[75px]" />
-
                 <h4 className="font-bold text-36px text-black text-start">
                   صاحــــب متجــــر إلكتــــروني
                   <br />
@@ -46,9 +41,18 @@ p-12"
                 </div>
               </div>
             </div>
+            {/* 8 empty divs needed for the 3D effect */}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
 
-          <div>
+          <div className="hover-3d">
             <div
               className="h-full rounded-58px shadow-[0px_0px_6.5px_1px_#00000040]
 p-12"
@@ -64,8 +68,11 @@ p-12"
                   />
                 </div>
                 {/* <CircleIcon /> */}
-                                <CircleIcon icon={MdOutlineShoppingBag} sizeClass="size-[75px]" />
-{/* 
+                <CircleIcon
+                  icon={MdOutlineShoppingBag}
+                  sizeClass="size-[75px]"
+                />
+                {/* 
                 <div className="size-[75px] center_flex bg-secondary rounded-40px mb-6">
                   <MdOutlineShoppingBag className="size-8 text-primary" />
                 </div> */}
@@ -76,15 +83,23 @@ p-12"
                 </h4>
               </div>
             </div>
+            {/* 8 empty divs needed for the 3D effect */}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
 
-          <div>
+          <div className="hover-3d">
             <div
               className="h-full rounded-58px shadow-[0px_0px_6.5px_1px_#00000040]
 p-12"
             >
               <div>
-                {/* <CircleIcon /> */}
                 <CircleIcon icon={BsBagHeartFill} sizeClass="size-[75px]" />
                 <h4 className="font-bold text-36px text-black text-start">
                   أو أســــر منتجــــة تبيــــع
@@ -102,6 +117,15 @@ p-12"
                 </div>
               </div>
             </div>
+            {/* 8 empty divs needed for the 3D effect */}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </div>

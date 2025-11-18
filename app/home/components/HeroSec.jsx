@@ -116,7 +116,7 @@ const HeroSec = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="hover-3d">
             <div className="bg-[#F6F6F6] rounded-66px">
               <Image
                 src="/home/hero2.webp"
@@ -126,6 +126,15 @@ const HeroSec = () => {
                 className="w-full h-auto"
               />
             </div>
+            {/* 8 empty divs needed for the 3D effect */}
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </div>

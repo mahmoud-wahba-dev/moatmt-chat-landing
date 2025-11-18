@@ -107,6 +107,7 @@
   --text-45px: 2.8125rem; /* 45px */
   --text-48px: 3rem; /* 48px */
   --text-52px: 3.25rem; /* 52px */
+  --text-60px: 3.75rem; /* 60px */
 
   /* Custom border-radius (px → rem) */
   --radius-8px: 0.5rem; /* 8px */
@@ -137,13 +138,13 @@
    DaisyUI Customization
 ======================== */
 
-  .collapse-plus > .collapse-title:after {
-    width: 32px;
-    height: 32px;
-    background-color: var(--color-primary);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    color: white;
-    align-items: center;
-  }
+.collapse-plus > .collapse-title:after {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
