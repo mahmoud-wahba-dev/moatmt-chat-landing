@@ -3,44 +3,99 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaTimes } from "react-icons/fa";
 import { FaCrown, FaBolt, FaMedal } from "react-icons/fa6";
+import { HiFire } from "react-icons/hi";
 
 const tabs = [
   { label: "شهري", value: "monthly" },
   { label: "سنوي", value: "yearly" },
 ];
 
+// Updated plans: features are objects with { label, included }
+// highlighted plan (second) contains checkoutOptions (4 cols)
 const plans = [
   {
     title: "باقة بوت",
     icon: FaCrown,
     price: { monthly: 55, yearly: 500 },
     desc: "كامل الخصائص بمزايا البوت",
-    features: ["الرد الآلي", "تقارير أساسية", "أسئلة & أجوبة", "تجربة مجانية"],
+    features: [
+      { label: "الرد الآلي", included: true },
+      { label: "تقارير أساسية", included: true },
+      { label: "أسئلة & أجوبة", included: true },
+      { label: "تجربة مجانية", included: true },
+      // example excluded feature
+      { label: "ربط API", included: false },
+    ],
     btnText: "اشترك الآن",
     highlight: false,
   },
   {
     title: "باقة بروفيشنال",
-    icon: FaMedal,
+    icon: HiFire,
     price: { monthly: 99, yearly: 900 },
     desc: "الأفضل للمتاجر المتوسطة",
     features: [
-      "إدارة الفريق",
-      "أسئلة غير محدودة",
-      "تحليل العملاء",
-      "دعم متقدم",
+      { label: "إدارة الفريق", included: true },
+      { label: "أسئلة غير محدودة", included: true },
+      { label: "تحليل العملاء", included: true },
+      { label: "دعم متقدم", included: true },
+      { label: "ربط API", included: true },
+      { label: "سعات أعلى", included: true },
+      { label: "إرسال رسائل 250K", included: true },
+      { label: "تخصيص واجهات", included: false },
     ],
     btnText: "اشترك الآن",
     highlight: true,
+    // checkoutOptions renders a 4-column footer panel for this plan
+    checkoutOptions: [
+      {
+        label: "salla",
+        price: "99",
+        brandIcon: "/home/salla.svg", // <- brand logo shown in box
+        currencyIcon: "/home/ryal_colored.svg",
+        bg: "bg-[#CFF7EE]", // light mint
+        textColor: "text-[#004D5A]",
+      },
+      {
+        label: "shopify",
+        price: "99",
+        brandIcon: "/home/shopify.svg",
+        currencyIcon: "/home/ryal_white.svg",
+        bg: "bg-[#64943E]", // green
+        textColor: "text-white",
+      },
+      {
+        label: "zid",
+        price: "99",
+        brandIcon: "/home/zid.svg",
+        currencyIcon: "/home/ryal_white.svg",
+        bg: "bg-[#3C1C54]", // purple
+        textColor: "text-white",
+      },
+      {
+        label: "moatmt",
+        price: "99",
+        brandIcon: "/home/moatmt.svg", // add this asset to /public/home
+        currencyIcon: "/home/ryal_white.svg",
+        bg: "bg-primary", // dark green
+        textColor: "text-white",
+      },
+    ],
   },
   {
     title: "باقة كنترول",
     icon: FaBolt,
     price: { monthly: 299, yearly: 2700 },
     desc: "حل شامل للمنشآت الكبيرة",
-    features: ["ربط API", "دعم مخصص", "تقارير متقدمة", "جميع مزايا الباقات"],
+    features: [
+      { label: "ربط API", included: true },
+      { label: "دعم مخصص", included: true },
+      { label: "تقارير متقدمة", included: true },
+      { label: "جميع مزايا الباقات", included: true },
+      { label: "مستخدمين غير محدودين", included: false },
+    ],
     btnText: "اطلب استشارة",
     highlight: false,
   },
@@ -93,6 +148,8 @@ export default function PricingSection() {
                     {plan.desc}
                   </p>
                 </div>
+
+                {/* price block */}
                 <div className="my-4 text-center rounded-16px  bg-[linear-gradient(180deg,#F8F8F8_0%,#F0F0F0_100%)] p-6">
                   <div className="text-60px font-bold text-primary center_flex gap-2">
                     {plan.price[selectedTab]}{" "}
@@ -120,114 +177,154 @@ export default function PricingSection() {
                     تجربة مجانية 5 أيام
                   </Link>
                 </div>
+
                 <div className="mb-6">
                   <hr className="text-black/10" />
                 </div>
+
                 <p className="font-normal text-black text-14px mb-3">
                   المميزات المتضمنة:
                 </p>
+
                 <ul className="flex-1 mb-7 space-y-2 text-right">
                   {plan.features.map((f, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center gap-2 text-green-500"
-                    >
-                      <span className="inline-block rounded-full p-1 bg-secondary size-5 center_flex">
-                        <FaCheck className="text-white" />
-                      </span>
-                      <span className="text-black  font-medium text-base">
-                        {f}
+                    <li key={idx} className="flex items-center gap-2">
+                      {f.included ? (
+                        <span className="inline-block rounded-full p-1 bg-secondary size-5 center_flex">
+                          <FaCheck className="text-white" />
+                        </span>
+                      ) : (
+                        <span className="inline-block rounded-full size-5 bg-[#D1D5DC] center_flex">
+                          <FaTimes className="text-white size-3" />
+                        </span>
+                      )}
+
+                      <span
+                        className={`text-base font-medium ${
+                          f.included
+                            ? "text-black"
+                            : "text-14px font-normal text-[#99A1AF] line-through"
+                        }`}
+                      >
+                        {f.label}
                       </span>
                     </li>
                   ))}
                 </ul>
+
                 <div className="mb-6">
                   <hr className="text-black/10" />
                 </div>
+
                 <p className="font-normal text-black text-14px mb-4">
                   اشترك عبر:
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-12 gap-1">
-                  <div className="sm:col-span-12 bg-[#CFF7EE] rounded-10px py-2.5">
-                    <div className="h-5">
-                      <Image
-                        src="/home/salla.svg"
-                        alt="Salla"
-                        width={48}
-                        height={20}
-                        className="w-full h-full "
-                      />
-                    </div>
-                    <div className="mt-1.5 center_flex gap-1">
-                      <span className="font-semibold text-12px text-[#004D5A]">
-                        55
-                      </span>
-                      <Image
-                        src="/home/ryal_colored.svg"
-                        alt="Currency"
-                        width={15}
-                        height={13}
-                      />
-                      <span className="font-semibold text-12px text-[#004D5A]">
-                        شهريا
-                      </span>
-                    </div>
-                  </div>
+                {/* If plan has checkoutOptions render 4-column panel, else render existing two/three option grid */}
+                {plan.checkoutOptions ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {plan.checkoutOptions.map((opt, k) => (
+                      <div
+                        key={`${opt.label}-${k}`}
+                        className={`${opt.bg} rounded-12px py-4 flex flex-col items-center justify-center text-center`}
+                      >
+                        <div className="h-6 mb-1.5">
+                          <Image
+                            src={opt.brandIcon}
+                            alt={opt.label}
+                            width={64}
+                            height={24}
+                          />
+                        </div>
 
-                  <div className="sm:col-span-6 bg-[#64943E] rounded-10px py-2.5">
-                    <div className="h-5">
-                      <Image
-                        src="/home/shopify.svg"
-                        alt="Shopify"
-                        width={48}
-                        height={20}
-                        className="w-full h-full "
-                      />
+                        <div
+                          className={`mt-1 flex items-center gap-2 text-12px ${opt.textColor} justify-center`}
+                        >
+                          <span className="font-semibold text-[12px]">
+                            {opt.price}
+                          </span>
+                          <Image
+                            src={opt.currencyIcon}
+                            alt="currency"
+                            width={16}
+                            height={14}
+                          />
+                          <div className={`${opt.textColor} opacity-90`}>
+                            شهرياً
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-1">
+                    <div className="sm:col-span-12 bg-[#CFF7EE] rounded-10px py-2.5">
+                      <div className="h-5">
+                        <Image
+                          src="/home/salla.svg"
+                          alt="Salla"
+                          width={48}
+                          height={20}
+                          className="w-full h-full "
+                        />
+                      </div>
+                      <div className="mt-1.5 center_flex gap-1">
+                        <span className="font-semibold text-12px">55</span>
+                        <Image
+                          src="/home/ryal_colored.svg"
+                          alt="Currency"
+                          width={15}
+                          height={13}
+                        />
+                        <span className="font-semibold text-12px">شهريا</span>
+                      </div>
                     </div>
-                    <div className="mt-1.5 center_flex gap-1 text-white">
-                      <span className="font-semibold text-12px ">55</span>
-                      <Image
-                        src="/home/ryal_white.svg"
-                        alt="Currency"
-                        width={15}
-                        height={13}
-                      />
-                      <span className="font-semibold text-12px ">شهريا</span>
+
+                    <div className="sm:col-span-6 bg-[#64943E] rounded-10px py-2.5">
+                      <div className="h-5">
+                        <Image
+                          src="/home/shopify.svg"
+                          alt="Shopify"
+                          width={48}
+                          height={20}
+                          className="w-full h-full "
+                        />
+                      </div>
+                      <div className="mt-1.5 center_flex gap-1 text-white">
+                        <span className="font-semibold text-12px ">55</span>
+                        <Image
+                          src="/home/ryal_white.svg"
+                          alt="Currency"
+                          width={15}
+                          height={13}
+                        />
+                        <span className="font-semibold text-12px ">شهريا</span>
+                      </div>
+                    </div>
+                    <div className="sm:col-span-6 bg-[#3C1C54] rounded-10px py-2.5">
+                      <div className="h-5">
+                        <Image
+                          src="/home/zid.svg"
+                          alt="Zid"
+                          width={48}
+                          height={20}
+                          className="w-full h-full "
+                        />
+                      </div>
+                      <div className="mt-1.5 center_flex gap-1 text-white">
+                        <span className="font-semibold text-12px ">55</span>
+                        <Image
+                          src="/home/ryal_white.svg"
+                          alt="Currency"
+                          width={15}
+                          height={13}
+                          className="text-white"
+                        />
+                        <span className="font-semibold text-12px ">شهريا</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="sm:col-span-6 bg-[#3C1C54] rounded-10px py-2.5">
-                    <div className="h-5">
-                      <Image
-                        src="/home/zid.svg"
-                        alt="Zid"
-                        width={48}
-                        height={20}
-                        className="w-full h-full "
-                      />
-                    </div>
-                    <div className="mt-1.5 center_flex gap-1 text-white">
-                      <span className="font-semibold text-12px ">55</span>
-                      <Image
-                        src="/home/ryal_white.svg"
-                        alt="Currency"
-                        width={15}
-                        height={13}
-                        className="text-white"
-                      />
-                      <span className="font-semibold text-12px ">شهريا</span>
-                    </div>
-                  </div>
-                </div>
-                {/* <button
-                  className={`w-full py-3 rounded-xl font-bold ${
-                    plan.highlight
-                      ? "bg-primary text-white"
-                      : "bg-emerald-50 text-primary"
-                  } transition`}
-                >
-                  {plan.btnText}
-                </button> */}
+                )}
               </div>
             );
           })}
