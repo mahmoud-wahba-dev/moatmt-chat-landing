@@ -12,8 +12,7 @@ const Packages = () => {
           </h2>
           <p className="font-normal text-22px  mb-6">تجربة 5 ايام مجاناً </p>
         </div>
-    <PricingSection />
- 
+        <PricingSection />
       </div>
     </section>
   );
