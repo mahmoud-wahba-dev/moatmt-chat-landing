@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa";
-import { FaCrown, FaBolt, FaMedal } from "react-icons/fa6";
+import { FaCrown, FaBolt } from "react-icons/fa6";
 import { HiFire } from "react-icons/hi";
 
 const tabs = [
@@ -12,8 +12,7 @@ const tabs = [
   { label: "سنوي", value: "yearly" },
 ];
 
-// Updated plans: features are objects with { label, included }
-// highlighted plan (second) contains checkoutOptions (4 cols)
+// Updated plans: removed unused btnText, kept features and checkoutOptions
 const plans = [
   {
     title: "باقة بوت",
@@ -21,14 +20,29 @@ const plans = [
     price: { monthly: 55, yearly: 500 },
     desc: "كامل الخصائص بمزايا البوت",
     features: [
-      { label: "الرد الآلي", included: true },
-      { label: "تقارير أساسية", included: true },
-      { label: "أسئلة & أجوبة", included: true },
-      { label: "تجربة مجانية", included: true },
-      // example excluded feature
-      { label: "ربط API", included: false },
+      // Included (green)
+      { label: "بوت الرد الآلي (عادي)", included: true },
+      { label: "الترحيب التلقائي", included: true },
+      { label: "الرسائل التلقائية", included: true },
+      { label: "رسائل OTP (للمتاجر)", included: true },
+      { label: "رسائل التقييم", included: true },
+      { label: "استرداد السلات", included: true },
+      { label: "سجل الإشعارات", included: true },
+      { label: "أيقونة المحادثة بالموقع", included: true },
+      { label: "تكامل واتساب API", included: true },
+      { label: "عدد الرسائل: 5K", included: true },
+      { label: "جلسات واتساب: 1", included: true },
+      { label: "رسائل الحملات التسويقية: 500", included: true },
+
+      // Not included (greyed / X)
+      { label: "بوت الذكاء الاصطناعي المتقدّم", included: false },
+      { label: "الرد على حالات الطلب", included: false },
+      { label: "تحويل لموظف حقيقي", included: false },
+      { label: "التقارير والإحصاءات", included: false },
+      { label: "مزامنة العملاء", included: false },
+      { label: "لوحة تحكم مخصّصة بدون متجر", included: false },
+      { label: "تحكم بجدولة عمل الذكاء الاصطناعي", included: false },
     ],
-    btnText: "اشترك الآن",
     highlight: false,
   },
   {
@@ -37,25 +51,43 @@ const plans = [
     price: { monthly: 99, yearly: 900 },
     desc: "الأفضل للمتاجر المتوسطة",
     features: [
-      { label: "إدارة الفريق", included: true },
-      { label: "أسئلة غير محدودة", included: true },
-      { label: "تحليل العملاء", included: true },
-      { label: "دعم متقدم", included: true },
-      { label: "ربط API", included: true },
-      { label: "سعات أعلى", included: true },
-      { label: "إرسال رسائل 250K", included: true },
-      { label: "تخصيص واجهات", included: false },
+      // Core bot & messaging
+      { label: "بوت الرد الآلي (عادي)", included: true },
+      { label: "الترحيب التلقائي", included: true },
+      { label: "الرسائل التلقائية", included: true },
+      { label: "رسائل OTP (للمتاجر)", included: true },
+      { label: "رسائل التقييم", included: true },
+      { label: "استرداد السلات", included: true },
+      { label: "سجل الإشعارات", included: true },
+      { label: "أيقونة المحادثة بالموقع", included: true },
+      { label: "تكامل واتساب API", included: true },
+
+      // Capacity / quotas
+      { label: "عدد الرسائل: 250K", included: true },
+      { label: "جلسات واتساب: 3", included: true },
+      { label: "رسائل الحملات التسويقية: 5K", included: true },
+
+      // Advanced AI & workflows
+      { label: "بوت الذكاء الاصطناعي المتقدّم", included: true },
+      { label: "الرد على حالات الطلب الذكي", included: true },
+      { label: "تحويل للموظف البشري (هاندوفر)", included: true },
+
+      // Admin / analytics / sync
+      { label: "التقارير والإحصاءات", included: true },
+      { label: "مزامنة العملاء", included: true },
+      { label: "لوحة تحكم مخصّصة", included: true },
+
+      // Optional / not included in this tier
+      { label: "تحكم توقيت عمل الذكاء الاصطناعي", included: false },
     ],
-    btnText: "اشترك الآن",
     highlight: true,
-    // checkoutOptions renders a 4-column footer panel for this plan
     checkoutOptions: [
       {
         label: "salla",
         price: "99",
-        brandIcon: "/home/salla.svg", // <- brand logo shown in box
+        brandIcon: "/home/salla.svg",
         currencyIcon: "/home/ryal_colored.svg",
-        bg: "bg-[#CFF7EE]", // light mint
+        bg: "bg-[#CFF7EE]",
         textColor: "text-[#004D5A]",
       },
       {
@@ -63,7 +95,7 @@ const plans = [
         price: "99",
         brandIcon: "/home/shopify.svg",
         currencyIcon: "/home/ryal_white.svg",
-        bg: "bg-[#64943E]", // green
+        bg: "bg-[#64943E]",
         textColor: "text-white",
       },
       {
@@ -71,15 +103,15 @@ const plans = [
         price: "99",
         brandIcon: "/home/zid.svg",
         currencyIcon: "/home/ryal_white.svg",
-        bg: "bg-[#3C1C54]", // purple
+        bg: "bg-[#3C1C54]",
         textColor: "text-white",
       },
       {
         label: "moatmt",
         price: "99",
-        brandIcon: "/home/moatmt.svg", // add this asset to /public/home
+        brandIcon: "/home/moatmt.svg",
         currencyIcon: "/home/ryal_white.svg",
-        bg: "bg-primary", // dark green
+        bg: "bg-primary",
         textColor: "text-white",
       },
     ],
@@ -90,13 +122,36 @@ const plans = [
     price: { monthly: 299, yearly: 2700 },
     desc: "حل شامل للمنشآت الكبيرة",
     features: [
-      { label: "ربط API", included: true },
-      { label: "دعم مخصص", included: true },
-      { label: "تقارير متقدمة", included: true },
-      { label: "جميع مزايا الباقات", included: true },
-      { label: "مستخدمين غير محدودين", included: false },
+      // Core bot & messaging
+      { label: "بوت الرد الآلي (عادي)", included: true },
+      { label: "بوت الذكاء الاصطناعي المتقدّم", included: true },
+      { label: "الترحيب التلقائي", included: true },
+      { label: "الرسائل التلقائية", included: true },
+      { label: "رسائل OTP (للمتاجر)", included: true },
+      { label: "رسائل التقييم", included: true },
+      { label: "استرداد السلات", included: true },
+      { label: "سجل الإشعارات", included: true },
+      { label: "أيقونة المحادثة بالموقع", included: true },
+      { label: "تكامل واتساب API", included: true },
+
+      // Capacity / quotas
+      { label: "عدد الرسائل: 1M", included: true },
+      { label: "جلسات واتساب: 5", included: true },
+      { label: "رسائل الحملات التسويقية: 20K", included: true },
+
+      // Advanced AI & workflows
+      { label: "الرد على حالات الطلب الذكي", included: true },
+      { label: "تحويل للموظف البشري (هاندوفر)", included: true },
+      { label: "تحكم بتوقيت عمل الذكاء الاصطناعي", included: true },
+
+      // Admin / analytics / sync
+      { label: "التقارير والإحصاءات المتقدمة", included: true },
+      { label: "مزامنة العملاء", included: true },
+      { label: "لوحة تحكم مخصّصة", included: true },
+
+      // Enterprise-only items
+      { label: "مستخدمين غير محدودين", included: true },
     ],
-    btnText: "اطلب استشارة",
     highlight: false,
   },
 ];
@@ -108,15 +163,12 @@ export default function PricingSection() {
     <section className="py-16 bg-gradient-to-b from-green-900 to-emerald-900 min-h-screen">
       <div className="container mx-auto">
         {/* Tabs */}
-        <div
-          className="flex justify-center mb-8 bg-white/9 w-fit rounded-40px p-2 max-w-md mx-auto p-2.5 backdrop-blur-3xl mb-14
-"
-        >
+        <div className="flex justify-center mb-8 bg-white/9 w-fit rounded-40px max-w-md mx-auto p-2.5 backdrop-blur-3xl mb-14">
           {tabs.map((tab) => (
             <button
               key={tab.value}
               onClick={() => setSelectedTab(tab.value)}
-              className={`bg-white/4 h-[58px] px-20 py-4  rounded-40px text-14px mx-2 font-bold text-white ${
+              className={`bg-white/4 h-[58px] px-20 py-4 rounded-40px text-14px mx-2 font-bold text-white ${
                 selectedTab === tab.value &&
                 "bg-[linear-gradient(179.04deg,#FFFFFF_61.8%,#2EE378_122.92%)]  !text-[#1C0531]"
               }`}
@@ -127,16 +179,23 @@ export default function PricingSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8  transition-all">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all">
           {plans.map((plan, i) => {
             const Icon = plan.icon;
             return (
               <div
                 key={i}
-                className={`rounded-24px border border-[#E5E7EB]  bg-white flex flex-col  p-8 relative ${
-                  plan.highlight ? " scale-105" : ""
+                className={`rounded-24px border border-[#E5E7EB] bg-white flex flex-col p-8 relative ${
+                  plan.highlight ? "scale-105" : ""
                 }`}
               >
+                {/* badge for highlighted plan */}
+                {plan.highlight && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#063F1F] text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+                    الأكثر شعبية
+                  </div>
+                )}
+
                 <div className="flex flex-col items-center gap-3 mb-6">
                   <div className="bg-[#0A381C0D] size-16 rounded-16px center_flex">
                     <Icon className="text-primary text-[2rem]" />
@@ -150,7 +209,7 @@ export default function PricingSection() {
                 </div>
 
                 {/* price block */}
-                <div className="my-4 text-center rounded-16px  bg-[linear-gradient(180deg,#F8F8F8_0%,#F0F0F0_100%)] p-6">
+                <div className="my-4 text-center rounded-16px bg-[linear-gradient(180deg,#F8F8F8_0%,#F0F0F0_100%)] p-6">
                   <div className="text-60px font-bold text-primary center_flex gap-2">
                     {plan.price[selectedTab]}{" "}
                     <span className="text-lg font-normal">
@@ -220,7 +279,6 @@ export default function PricingSection() {
                   اشترك عبر:
                 </p>
 
-                {/* If plan has checkoutOptions render 4-column panel, else render existing two/three option grid */}
                 {plan.checkoutOptions ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {plan.checkoutOptions.map((opt, k) => (
@@ -238,7 +296,7 @@ export default function PricingSection() {
                         </div>
 
                         <div
-                          className={`mt-1 flex items-center gap-2 text-12px ${opt.textColor} justify-center`}
+                          className={`flex items-center gap-2 text-12px ${opt.textColor} justify-center`}
                         >
                           <span className="font-semibold text-[12px]">
                             {opt.price}
@@ -249,8 +307,10 @@ export default function PricingSection() {
                             width={16}
                             height={14}
                           />
-                          <div className={`${opt.textColor} opacity-90`}>
-                            شهرياً
+                          <div
+                            className={`${opt.textColor} `}
+                          >
+                            {selectedTab === "monthly" ? "شهرياً" : "سنوياً"}
                           </div>
                         </div>
                       </div>
