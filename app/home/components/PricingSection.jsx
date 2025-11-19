@@ -18,7 +18,7 @@ const plans = [
     title: "باقة بوت",
     icon: FaCrown,
     price: { monthly: 55, yearly: 500 },
-    desc: "كامل الخصائص بمزايا البوت",
+    desc: "مثالية للمشاريع الناشئة والأفراد",
     features: [
       // Included (green)
       { label: "بوت الرد الآلي (عادي)", included: true },
@@ -46,10 +46,10 @@ const plans = [
     highlight: false,
   },
   {
-    title: "باقة بروفيشنال",
+    title: "باقة سويتش",
     icon: HiFire,
     price: { monthly: 99, yearly: 900 },
-    desc: "الأفضل للمتاجر المتوسطة",
+    desc: "الأفضل للشركات الصغيرة والمتوسطة",
     features: [
       // Core bot & messaging
       { label: "بوت الرد الآلي (عادي)", included: true },
@@ -120,7 +120,7 @@ const plans = [
     title: "باقة كنترول",
     icon: FaBolt,
     price: { monthly: 299, yearly: 2700 },
-    desc: "حل شامل للمنشآت الكبيرة",
+    desc: "حل متكامل للشركات الكبيرة",
     features: [
       // Core bot & messaging
       { label: "بوت الرد الآلي (عادي)", included: true },
@@ -160,7 +160,7 @@ export default function PricingSection() {
   const [selectedTab, setSelectedTab] = useState("monthly");
 
   return (
-    <section className="py-16 bg-gradient-to-b from-green-900 to-emerald-900 min-h-screen">
+    <section className="py-16  ">
       <div className="container mx-auto">
         {/* Tabs */}
         <div className="flex justify-center mb-8 bg-white/9 w-fit rounded-40px max-w-md mx-auto p-2.5 backdrop-blur-3xl mb-14">
@@ -185,13 +185,13 @@ export default function PricingSection() {
             return (
               <div
                 key={i}
-                className={`rounded-24px border border-[#E5E7EB] bg-white flex flex-col p-8 relative ${
+                className={`rounded-24px border border-[#E5E7EB] bg-white flex flex-col p-8 relative  ${
                   plan.highlight ? "scale-105" : ""
                 }`}
               >
                 {/* badge for highlighted plan */}
                 {plan.highlight && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#063F1F] text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
+                  <div className="absolute -top-[19px] pt-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold shadow-md">
                     الأكثر شعبية
                   </div>
                 )}
