@@ -5,6 +5,7 @@ import Packages from "./home/components/Packages";
 import PreFooter from "./home/components/PreFooter";
 // import OurPartners from "./home/components/OurPartners";
 import SwiperSlider from "./home/components/SwiperSlider";
+import Testimonial from "./home/components/Testimonial";
 import WhoIsMoatmt from "./home/components/WhoIsMoatmt";
 import WhyMoatmt from "./home/components/WhyMoatmt";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <SwiperSlider />
       <WhoIsMoatmt />
       <WhyMoatmt />
+      <Testimonial />
       <Packages />
       <IsMoatmtSuitable />
       <Faq />

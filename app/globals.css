@@ -104,6 +104,7 @@
   --text-32px: 2rem; /* 32px */
   --text-36px: 2.25rem; /* 36px */
   --text-40px: 2.5rem; /* 40px */
+  --text-42px: 2.625rem; /* 42px */
   --text-45px: 2.8125rem; /* 45px */
   --text-48px: 3rem; /* 48px */
   --text-52px: 3.25rem; /* 52px */
@@ -132,6 +133,7 @@
   --radius-58px: 3.625rem; /* 58px */
   --radius-65px: 4.0625rem; /* 65px */
   --radius-66px: 4.125rem; /* 66px */
+  --radius-67px: 4.1875rem; /* 67px */
 }
 
 /* ========================
