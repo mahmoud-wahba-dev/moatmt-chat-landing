@@ -53,7 +53,7 @@ const IsMoatmtSuitable = () => {
           </div>
         </div>
       </div>
-      <div className="size-[537px] absolute -bottom-[10%] start-0 pointer-events-none ">
+      <div className="size-[537px] max-w-full absolute -bottom-[10%] start-0 pointer-events-none ">
         <Image
           src="/home/white_blur_effect.webp"
           alt="Is Moatmt Suitable Background"
