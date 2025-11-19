@@ -163,7 +163,7 @@ export default function TestimonialSlider() {
             <HiArrowLeft className="text-white text-lg" />
           </button>
         </div>
-        {/* Pagination */}
+        {/* Pagination */}  
         <div>
           <span className="font-bold text-primary text-12px">
             {String(activeIndex + 1).padStart(2, "0")} /{" "}

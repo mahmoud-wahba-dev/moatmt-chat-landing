@@ -163,7 +163,7 @@ export default function PricingSection() {
     <section className="py-16  ">
       <div className="container mx-auto">
         {/* Tabs */}
-        <div className="flex justify-center mb-8 bg-white/9 w-fit rounded-40px max-w-md mx-auto p-2.5 backdrop-blur-3xl mb-14">
+        <div className="flex flex-wrap justify-center mb-8 bg-white/9 w-fit rounded-40px max-w-md mx-auto p-2.5 backdrop-blur-3xl mb-14">
           {tabs.map((tab) => (
             <button
               key={tab.value}
@@ -179,7 +179,7 @@ export default function PricingSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 transition-all">
           {plans.map((plan, i) => {
             const Icon = plan.icon;
             return (
