@@ -8,7 +8,7 @@ html {
 }
 :root {
   /* Primary brand color (used for btn-primary, etc) */
-  --primary: #0a381c;
+  --primary: #2927F6;
   --primary-foreground: #fff; /* White text on primary */
 
   /* Secondary accent color */
@@ -24,10 +24,10 @@ html {
   --foreground: #0a381c; /* Main base text color */
 
   /* DaisyUI expected variable names */
-  --color-primary: #0a381c;
+  --color-primary: #2927F6;
   --color-primary-content: #fff;
   --color-secondary: #2ee378;
-  --color-secondary-content: #0a381c;
+  --color-secondary-content: white;
   --color-error: #ff4444;
   --color-error-content: #fff;
   --color-base-100: #fff;

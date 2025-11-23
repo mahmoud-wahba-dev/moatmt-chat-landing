@@ -5,15 +5,39 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="bg-primary text-white">
+    <nav className=" text-black  sticky top-0 z-50 bg-white ">
       <div className="container max-w-full">
-        <div className="navbar  shadow-sm max-sm:justify-between">
-          <div className="navbar-start">
-            <div className="dropdown">
+        <div className="navbar  max-sm:justify-between">
+          <Link className="navbar-start" href="/">
+            <Image src="/logo.svg" alt="Logo" width={298} height={99} />
+          </Link>
+          <div className="navbar-center">
+        
+            <div className="navbar-center hidden sm:flex">
+              <ul className="menu menu-horizontal px-1">
+                <li>
+                  <Link href="/" className="font-medium text-24px ">
+                    الرئيسية
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/" className="font-medium text-24px">
+                الاسئلة الشائعة
+                  </Link>
+                </li>
+                <li>
+                  <Link href="" className="font-medium text-24px">
+              البـــاقـــات
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+    <div className="dropdown">
               <div
                 tabIndex={0}
                 role="button"
-                className="btn btn-ghost lg:hidden"
+                className="btn btn-ghost sm:hidden"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +57,7 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content text-black bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content text-black bg-base-100 rounded-box z-1 mt-3 sm:w-52 p-2 shadow start-[-4rem] max-sm:w-40"
               >
                 <li>
                   <Link href="">الرئيسية</Link>
@@ -46,43 +70,24 @@ const Navbar = () => {
                 <li>
                   <Link href="/">الأسعار</Link>
                 </li>
-                <div className="flex flex-col gap-4 mt-4 ">
-                  <Link className="btn btn-secondary" href="/">
+                <div className="flex flex-col gap-4 mt-4 sm :hidden">
+                  <Link className="btn btn-primary " href="/">
                     تسجيل دخول
                   </Link>
-                  <Link className="btn " href="/">
-                    تسجيل جديد
-                  </Link>
+
                 </div>
               </ul>
             </div>
-            <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1">
-                <li>
-                  <Link href="/" className="font-semibold text-base ">الرئيسية</Link>
-                </li>
-                <li>
-                  <Link href="/" className="font-semibold text-base">كيف يشتغل مؤتمت؟</Link>
-                </li>
-                <li>
-                  <Link href="" className="font-semibold text-base">الأسعار</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <Link className="" href="/">
-            <Image src="/logo.svg" alt="Logo" width={133} height={31} />
-          </Link>
-
           <div className="navbar-end gap-6 max-sm:hidden me-2">
-            <Link className="btn btn-secondary font-semibold text-base rounded-11px p-2" href="/" >
+            <Link
+              className="btn btn-primary font-medium text-24px rounded-9px px-8 py-3 h-[60px]"
+              href="/"
+            >
               تسجيل دخول
             </Link>
-            <Link className="btn text-primary bg-white font-semibold text-base rounded-11px p-2" href="/">
-              تسجيل جديد
-            </Link>
+  
           </div>
-          <ThemeSwitcher />
+          {/* <ThemeSwitcher /> */}
         </div>
       </div>
     </nav>

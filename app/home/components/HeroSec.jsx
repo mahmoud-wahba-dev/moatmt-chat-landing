@@ -1,11 +1,8 @@
 import BtnConsult from "@/components/ui/BtnConsult";
 import BtnTry from "@/components/ui/BtnTry";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import { GoArrowUpLeft } from "react-icons/go";
-import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 const HeroSec = () => {
   return (

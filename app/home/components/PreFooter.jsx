@@ -20,15 +20,7 @@ const PreFooter = () => {
           <BtnTry />
           <BtnConsult />
         </div>
-        <div className="bg-white/10 p-6 pb-0 overflow-hidden h-auto rounded-tl-30px rounded-tr-30px">
-            <Image
-              src="/home/dashboard.webp"
-              alt="PreFooter Badge"
-              width={1600}
-              height={1200}
-              className="w-full h-full object-cover rounded-30px"
-            />
-        </div>
+      
       </div>
     </section>
   );
