@@ -68,35 +68,19 @@ const Employee = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="relative bg-body rounded-66px p-9 min-h-[578px] flex items-end">
-              <div className="">
-                <div>
+            <div className="bg-body rounded-66px p-9 min-h-[578px] flex items-end">
+              <div>
+                <div className="flex justify-end ">
                   <Image
-                    src="/home/emp_card2_img1.webp"
+                    src="/home/emp_card2.webp"
                     alt="Smart Management Icon"
-                    width={168}
-                    height={168}
-                    className="absolute top-11 start-[20%]"
-                  />
-
-                  <Image
-                    src="/home/emp_card2_img2.webp"
-                    alt="Smart Management Icon"
-                    width={172}
-                    height={172}
-                    className="absolute top-40 end-[25%]"
-                  />
-
-                  <Image
-                    src="/home/emp_card2_img3.webp"
-                    alt="Smart Management Icon"
-                    width={148}
-                    height={176}
-                    className="absolute top-14 end-7"
+                    width={542}
+                    height={278}
+                    className=""
                   />
                 </div>
                 <div className="mb-10">
-                  <FaBolt className="text-primary w-11 h-14" />
+                  <FaBolt className="size-12 text-primary" />
                 </div>
                 <h6 className="font-semibold text-30px text-black mb-5">
                   كفــــــــاءة إداريــــــــة ذكيــــــــة.
@@ -107,9 +91,17 @@ const Employee = () => {
                 </p>
               </div>
             </div>
-
             <div className="bg-body rounded-66px p-9 min-h-[578px] flex items-end">
               <div>
+                <div className="flex justify-end ">
+                  <Image
+                    src="/home/emp_card3.webp"
+                    alt="Smart Management Icon"
+                    width={469}
+                    height={267}
+                    className=""
+                  />
+                </div>
                 <div className="mb-10">
                   <Image
                     src="/home/emp3_icon.svg"

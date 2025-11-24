@@ -6,7 +6,7 @@ import Image from "next/image";
 import React from "react";
 import { FaFire, FaStar } from "react-icons/fa";
 import { ImFire } from "react-icons/im";
-import { PiPaperPlaneTiltBold } from "react-icons/pi";
+import { PiPaperPlaneFill, PiPaperPlaneTiltBold } from "react-icons/pi";
 
 const HeroSec = () => {
   return (
@@ -38,7 +38,7 @@ const HeroSec = () => {
                 <BtnSubscribe
                   content="انشئ حسابك الان"
                   className="text-white bg-primary"
-                  icon={<PiPaperPlaneTiltBold />}
+                  icon={<PiPaperPlaneFill   className="-rotate-45" />}
 
                 />
                 <BtnMeta />

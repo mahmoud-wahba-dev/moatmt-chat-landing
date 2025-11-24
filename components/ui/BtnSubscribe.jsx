@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GoArrowUpLeft } from "react-icons/go";
+import { PiPaperPlaneFill } from "react-icons/pi";
 
 // Props for easy reusability (optional defaults)
 export default function BtnSubscribe({
@@ -7,7 +8,7 @@ export default function BtnSubscribe({
   content = null,
   children = "",
   className = "bg-primary h-[74px] gap-2.5",
-  icon = <GoArrowUpLeft />,
+  icon = <PiPaperPlaneFill className="-rotate-45"/>,
   iconContainerClassName = "bg-white text-primary",
   ...props
 }) {
@@ -20,7 +21,7 @@ export default function BtnSubscribe({
       {children}
       {content}
       <span
-        className={` size-11 center_flex rounded-5px ${iconContainerClassName}`}
+        className={` size-11 center_flex rounded-5px  ${iconContainerClassName}`}
       >
         {icon}
       </span>

@@ -5,7 +5,7 @@ const Badge = ({ text, bageBg, badgeColor, dotBg, textColor }) => {
     <div
       className={`rounded-5px px-6 py-2.5 text-white font-semibold text-base flex items-center gap-2.5 w-fit h-11  ${bageBg} ${badgeColor}`}
     >
-      <div className={`size-2.5 rounded-full ${dotBg}`}></div>
+      <div className={`size-2.5 rounded-full  ${dotBg}`}></div>
       <p className={`font-semibold text-base ${textColor}`}>{text}</p>
     </div>
   );
