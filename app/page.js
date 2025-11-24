@@ -1,3 +1,4 @@
+import ClientSupport from "./home/components/ClientSupport";
 import CustomerSupport from "./home/components/CustomerSupport";
 import Employee from "./home/components/Employee";
 import EmpSatisfaction from "./home/components/EmpSatisfaction";
@@ -16,6 +17,7 @@ export default function Home() {
       <Employee />
       <EmpSatisfaction />
       <Team />
+      <ClientSupport />
 
       {/* <Faq /> */}
       {/* <PreFooter /> */}
