@@ -19,8 +19,8 @@ export default function Home() {
       <Team />
       <ClientSupport />
 
-      {/* <Faq /> */}
-      {/* <PreFooter /> */}
+      <Faq />
+      <PreFooter />
     </section>
   );
 }

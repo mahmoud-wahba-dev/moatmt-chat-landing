@@ -10,11 +10,12 @@ export function FAQAccordion({ faqs }) {
             type="radio"
             name="my-accordion-faq"
             defaultChecked={idx === 0}
+            className="peer"
           />
-          <div className="collapse-title font-semibold text-22px ">{faq.question}</div>
+          <div className="collapse-title font-medium text-18px peer-checked:text-primary">{faq.question}</div>
           <div className="collapse-content text-sm  relative pb-0">
             <div className="flex items-center gap-2 py-11 pt-2.5 ">
-              <span className="font-light text-28px text-black">{faq.answer}</span>
+              <span className="font-medium text-22px text-dark-black">{faq.answer}</span>
             </div>
           </div>
         </div>

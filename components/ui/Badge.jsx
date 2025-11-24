@@ -3,9 +3,9 @@ import React from "react";
 const Badge = ({
   text,
   badgeContainerClass,
-  bageBg,
+  bageBg = "bg-primary",
   badgeColor,
-  dotBg,
+  dotBg= "bg-dot",
   textColor,
 }) => {
   return (
