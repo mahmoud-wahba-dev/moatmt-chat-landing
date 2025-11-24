@@ -18,7 +18,7 @@ const ClientSupport = () => {
       subscribeBtnIconContainerClassName={"border-primary border  text-primary"}
       imgSrc={"client_support_img"}
       altText={"Client Support Section Image"}
-      orderNumChild1={1}
+      orderNumChild1={2}
       orderNumChild2={1}
     />
   );

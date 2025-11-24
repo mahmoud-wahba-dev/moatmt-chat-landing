@@ -22,11 +22,15 @@ const SecWithImg = ({
   orderNumChild1,
   orderNumChild2,
 }) => {
+  const orderClasses = {
+    1: "order-1",
+    2: "order-2",
+  };
   return (
     <section className="bg-primary rounded-60px py-20">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-          <div className={`order-${orderNumChild1}`}>
+          <div className={orderClasses[orderNumChild1]}>
             <div>
               <Image
                 src={`/home/${imgSrc}.webp`}
@@ -36,7 +40,7 @@ const SecWithImg = ({
               />
             </div>
           </div>
-          <div className={`order-${orderNumChild2}`}>
+          <div className={orderClasses[orderNumChild2]}>
             <div className="flex items-center">
               <div>
                 <div className="mb-2.5">
