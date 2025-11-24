@@ -16,17 +16,17 @@ const Navbar = () => {
             <div className="navbar-center hidden sm:flex">
               <ul className="menu menu-horizontal px-1">
                 <li>
-                  <Link href="/" className="font-medium text-24px ">
+                  <Link href="/" className="font-medium lg:text-24px ">
                     الرئيسية
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="font-medium text-24px">
+                  <Link href="/" className="font-medium lg:text-24px">
                 الاسئلة الشائعة
                   </Link>
                 </li>
                 <li>
-                  <Link href="" className="font-medium text-24px">
+                  <Link href="" className="font-medium lg:text-24px">
               البـــاقـــات
                   </Link>
                 </li>
@@ -80,7 +80,7 @@ const Navbar = () => {
             </div>
           <div className="navbar-end gap-6 max-sm:hidden me-2">
             <Link
-              className="btn btn-primary font-medium text-24px rounded-9px px-8 py-3 h-[60px]"
+              className="btn btn-primary font-medium md:text-24px rounded-9px px-8 py-3 h-[60px]"
               href="/"
             >
               تسجيل دخول

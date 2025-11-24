@@ -90,6 +90,7 @@ html {
 
 @theme inline {
   --color-dark-black: #464646;
+  --color-body: #f8f8f8;
 
   /* Custom font sizes (px → rem) */
   --text-8px: 0.5rem; /* 8px */
@@ -143,6 +144,7 @@ html {
   --radius-40px: 2.5rem; /* 40px */
   --radius-44px: 2.75rem; /* 44px */
   --radius-58px: 3.625rem; /* 58px */
+  --radius-60px: 4rem; /* 60px */
   --radius-65px: 4.0625rem; /* 65px */
   --radius-66px: 4.125rem; /* 66px */
   --radius-67px: 4.1875rem; /* 67px */
