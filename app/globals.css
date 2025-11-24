@@ -91,6 +91,7 @@ html {
 @theme inline {
   --color-dark-black: #464646;
   --color-body: #f8f8f8;
+  --color-dot: #55cdff;
 
   /* Custom font sizes (px → rem) */
   --text-8px: 0.5rem; /* 8px */

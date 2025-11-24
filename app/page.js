@@ -1,4 +1,5 @@
 import CustomerSupport from "./home/components/CustomerSupport";
+import Employee from "./home/components/Employee";
 import Faq from "./home/components/Faq";
 import HeroSec from "./home/components/HeroSec";
 
@@ -9,6 +10,7 @@ export default function Home() {
     <section className="">
       <HeroSec />
       <CustomerSupport />
+      <Employee />
       {/* <Faq /> */}
       {/* <PreFooter /> */}
     </section>

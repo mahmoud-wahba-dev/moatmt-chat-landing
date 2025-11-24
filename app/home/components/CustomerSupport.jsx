@@ -4,16 +4,20 @@ import { TbAlertOctagon, TbAlertOctagonFilled } from "react-icons/tb";
 import CustomerSupportCard from "./CustomerSupportCard";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { GoDeviceMobile } from "react-icons/go";
+import Badge from "@/components/ui/Badge";
 
 const CustomerSupport = () => {
   return (
     <section className="bg-body sm:my-28 my-12  sm:py-16 py-8 rounded-60px  ">
       <div className="container">
         <div className="mb-2.5">
-          <div className="bg-primary rounded-5px px-6 py-2.5 text-white font-semibold text-base flex items-center gap-2.5 w-fit h-11 min-w-40">
-            <div className="size-2.5 bg-[#55CDFF] rounded-full"></div>
-            <p>خدمــــة العــملاء</p>
-          </div>
+          <Badge
+            text="خدمــــة العــملاء"
+            bageBg="bg-primary"
+            badgeColor="text-white"
+            dotBg="bg-dot"
+            textColor="text-white"
+          />
         </div>
 
         <div className="flex items-center justify-between gap-32 max-sm:flex-wrap mb-14">
