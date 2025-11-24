@@ -8,8 +8,10 @@ html {
 }
 :root {
   /* Primary brand color (used for btn-primary, etc) */
-  --primary: #2927F6;
+  --primary: #2927f6;
   --primary-foreground: #fff; /* White text on primary */
+
+  --dark-black: #464646;
 
   /* Secondary accent color */
   --secondary: #2ee378;
@@ -24,7 +26,9 @@ html {
   --foreground: #0a381c; /* Main base text color */
 
   /* DaisyUI expected variable names */
-  --color-primary: #2927F6;
+  --color-primary: #2927f6;
+  --color-dark-black: #464646;
+
   --color-primary-content: #fff;
   --color-secondary: #2ee378;
   --color-secondary-content: white;
@@ -49,6 +53,7 @@ html {
 
   /* DaisyUI expected variable names for dark */
   --color-primary: #0a381c;
+  --color-dark-black: #464646;
   --color-primary-content: #2ee378;
   --color-secondary: #2ee378;
   --color-secondary-content: #0a381c;
@@ -84,6 +89,8 @@ html {
 }
 
 @theme inline {
+  --color-dark-black: #464646;
+
   /* Custom font sizes (px → rem) */
   --text-8px: 0.5rem; /* 8px */
   --text-9px: 0.5625rem; /* 9px */
@@ -112,8 +119,10 @@ html {
   --text-48px: 3rem; /* 48px */
   --text-52px: 3.25rem; /* 52px */
   --text-60px: 3.75rem; /* 60px */
+  --text-64px: 4rem; /* 64px */
 
   /* Custom border-radius (px → rem) */
+  --radius-5px: 0.3125rem; /* 5px */
   --radius-8px: 0.5rem; /* 8px */
   --radius-9px: 0.5625rem; /* 9px */
   --radius-10px: 0.625rem; /* 10px */

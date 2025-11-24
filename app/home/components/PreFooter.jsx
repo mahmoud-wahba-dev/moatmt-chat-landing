@@ -1,5 +1,5 @@
-import BtnConsult from "@/components/ui/BtnConsult";
-import BtnTry from "@/components/ui/BtnTry";
+import BtnConsult from "@/components/ui/BtnMeta";
+import BtnTry from "@/components/ui/BtnSubscribe";
 import Image from "next/image";
 import React from "react";
 
