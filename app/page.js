@@ -6,6 +6,7 @@ import HeroSec from "./home/components/HeroSec";
 
 import PreFooter from "./home/components/PreFooter";
 import SecWithImg from "./home/components/SecWithImg";
+import Team from "./home/components/Team";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <CustomerSupport />
       <Employee />
       <EmpSatisfaction />
-
+      <Team />
 
       {/* <Faq /> */}
       {/* <PreFooter /> */}
