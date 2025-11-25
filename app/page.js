@@ -7,7 +7,6 @@ import HeroSec from "./home/components/HeroSec";
 import Packages from "./home/components/Packages";
 
 import PreFooter from "./home/components/PreFooter";
-import SecWithImg from "./home/components/SecWithImg";
 import Team from "./home/components/Team";
 
 export default function Home() {
