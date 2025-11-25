@@ -168,3 +168,7 @@ html {
   color: white;
   align-items: center;
 }
+
+img{
+  max-width: 100%;
+}

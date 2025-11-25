@@ -42,8 +42,8 @@ const Team = () => {
                   <Image
                     src="/home/team_card1_img.webp"
                     alt="Smart Management Icon"
-                    width={542}
-                    height={278}
+                    width={738}
+                    height={272}
                     className=""
                   />
                 </div>
