@@ -4,6 +4,7 @@ import Employee from "./home/components/Employee";
 import EmpSatisfaction from "./home/components/EmpSatisfaction";
 import Faq from "./home/components/Faq";
 import HeroSec from "./home/components/HeroSec";
+import Packages from "./home/components/Packages";
 
 import PreFooter from "./home/components/PreFooter";
 import SecWithImg from "./home/components/SecWithImg";
@@ -18,7 +19,7 @@ export default function Home() {
       <EmpSatisfaction />
       <Team />
       <ClientSupport />
-
+      <Packages />
       <Faq />
       <PreFooter />
     </section>

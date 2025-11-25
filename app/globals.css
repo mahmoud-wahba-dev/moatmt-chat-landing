@@ -92,6 +92,7 @@ html {
   --color-dark-black: #464646;
   --color-body: #f8f8f8;
   --color-dot: #55cdff;
+  --color-greey: #595959;
 
   /* Custom font sizes (px → rem) */
   --text-8px: 0.5rem; /* 8px */
@@ -122,6 +123,7 @@ html {
   --text-52px: 3.25rem; /* 52px */
   --text-60px: 3.75rem; /* 60px */
   --text-64px: 4rem; /* 64px */
+  --text-65px: 4.0625rem; /* 65px */
 
   /* Custom border-radius (px → rem) */
   --radius-5px: 0.3125rem; /* 5px */
