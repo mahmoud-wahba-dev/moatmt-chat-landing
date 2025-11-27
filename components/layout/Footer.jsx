@@ -67,8 +67,7 @@ const Footer = () => {
             />
           </div>
           <p className="sm:w-[74%] text-black font-medium text-22px leading-8">
-            منصة سعودية تقدم أتمتة متكاملة لخدمات الواتساب مدعومة بروبوتات ذكاء
-            اصطناعي لخدمة عملائك تغنيك عن الحاجة لفريق دعم كامل
+  منصة موحدة لخدمة العملاء جمعت لك مختلف وسائل التواصل بمكان واحدمن لوحة تحكم واحدة
           </p>
           <div className="flex items-center gap-3">
             <label htmlFor="" className="text-primary font-normal text-18px">

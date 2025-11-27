@@ -168,7 +168,13 @@ html {
   color: white;
   align-items: center;
 }
+/* Apply scale-50 for max-sm (<= 640px) */
+@media (max-width: 640px) {
+  .collapse-plus > .collapse-title:after {
+    transform: scale(0.5);
+  }
+}
 
-img{
+img {
   max-width: 100%;
 }

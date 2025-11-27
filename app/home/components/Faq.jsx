@@ -50,7 +50,7 @@ const Faq = () => {
                     badgeContainerClass={"bg-primry"}
                   />
                 </div>
-                <h2 className="font-semibold text-52px  mb-9 ">
+                <h2 className="font-semibold text-52px  mb-9  text-black">
                   أسئلة كثير نسمعها…
                   <br />
                   جاوبنا عليها !.
