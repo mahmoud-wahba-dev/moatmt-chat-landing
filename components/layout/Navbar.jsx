@@ -20,12 +20,12 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#faqSec" className="font-medium lg:text-24px">
+                  <Link href="/#faqSec" className="font-medium lg:text-24px">
                     الاسئلة الشائعة
                   </Link>
                 </li>
                 <li>
-                  <Link href="#packages" className="font-medium lg:text-24px">
+                  <Link href="/#packages" className="font-medium lg:text-24px">
                     البـــاقـــات
                   </Link>
                 </li>
@@ -59,11 +59,11 @@ const Navbar = () => {
               </li>
 
               <li>
-                <Link href="#faqSec"> الاسئلة الشائعة </Link>
+                <Link href="/#faqSec"> الاسئلة الشائعة </Link>
               </li>
 
               <li>
-                <Link href="#packages"> البـــاقـــات </Link>
+                <Link href="/#packages"> البـــاقـــات </Link>
               </li>
               <div className="flex flex-col gap-4 mt-4 sm :hidden">
                 <Link

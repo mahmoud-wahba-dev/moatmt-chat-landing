@@ -18,9 +18,9 @@ const Footer = () => {
         { label: "من نحن", href: "/about" },
         { label: "شروط الاستخدام", href: "/terms" },
         { label: "شروط الخصوصية", href: "/privacy" },
-        { label: "المدونة", href: "/#" },
+        { label: "المدونة", href: "#" },
         { label: "الأسعار", href: "#packages" },
-        { label: "المزايا", href: "/#" },
+        { label: "المزايا", href: "#" },
       ],
     },
     {
@@ -47,27 +47,39 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { href: "https://www.facebook.com/share/1JR3fKCLS4/?mibextid=wwXIfr", label: "Facebook", icon: FaFacebook },
-    { href: "https://www.instagram.com/moatmt.sa?igsh=MTA3NHF2ZWpyMzZkZw%3D%3D", label: "Instagram", icon: FaInstagram },
-    { href: "https://www.tiktok.com/@moatmt.sa?_t=ZS-90WDjBNwJe5&_r=1", label: "Tiktok", icon: FaTiktok },
+    {
+      href: "https://www.facebook.com/share/1JR3fKCLS4/?mibextid=wwXIfr",
+      label: "Facebook",
+      icon: FaFacebook,
+    },
+    {
+      href: "https://www.instagram.com/moatmt.sa?igsh=MTA3NHF2ZWpyMzZkZw%3D%3D",
+      label: "Instagram",
+      icon: FaInstagram,
+    },
+    {
+      href: "https://www.tiktok.com/@moatmt.sa?_t=ZS-90WDjBNwJe5&_r=1",
+      label: "Tiktok",
+      icon: FaTiktok,
+    },
     { href: "https://x.com/moatmt?s=21", label: "Twitter", icon: FaXTwitter },
     { href: "#", label: "LinkedIn", icon: FaLinkedin },
-    { href: "https://www.snapchat.com/@moatmt.sa?sid=4daf2bfdbadf41519afc1d8fd6586463&share_id=BJAL3k5yS6GdLCQvmUpHbA&invite_id=B2EMS1LI", label: "Snapchat", icon: FaSnapchatGhost },
+    {
+      href: "https://www.snapchat.com/@moatmt.sa?sid=4daf2bfdbadf41519afc1d8fd6586463&share_id=BJAL3k5yS6GdLCQvmUpHbA&invite_id=B2EMS1LI",
+      label: "Snapchat",
+      icon: FaSnapchatGhost,
+    },
   ];
   return (
     <footer className=" text-black px-5 lg:px-20 pt-10 pb-6">
       <div className="footer grid grid-cols-1 sm:grid-cols-12  sm:footer-horizontal  text-white ">
         <aside className="sm:col-span-4 md:col-span-5 space-y-4">
           <div>
-            <Image
-              src="/logo_footer.svg"
-              alt="Logo Footer"
-              width={352}
-              height={101}
-            />
+            <Image src="/logo.svg" alt="Logo Footer" width={352} height={101} />
           </div>
           <p className="sm:w-[74%] text-black font-medium text-22px leading-8">
-  منصة موحدة لخدمة العملاء جمعت لك مختلف وسائل التواصل بمكان واحدمن لوحة تحكم واحدة
+            منصة موحدة لخدمة العملاء جمعت لك مختلف وسائل التواصل بمكان
+            واحدمن لوحة تحكم واحدة
           </p>
           <div className="flex items-center gap-3">
             <label htmlFor="" className="text-primary font-normal text-18px">
