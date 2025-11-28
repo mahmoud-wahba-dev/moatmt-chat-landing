@@ -5,7 +5,7 @@ export const metadata = {
 
 export default function Privacy() {
   return (
-    <section className="bg-primary rounded-60px py-20 min-h-screen" dir="ltr" lang="en">
+    <section className="scroll-mt-48 bg-primary rounded-60px py-20 min-h-screen" dir="ltr" lang="en">
       <div className="container">
         <div className="max-w-3xl mx-auto text-white text-left space-y-6">
           <h1 className="font-bold text-48px">Privacy Policy</h1>

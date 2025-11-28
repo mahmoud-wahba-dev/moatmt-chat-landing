@@ -6,7 +6,7 @@ export const metadata = {
 export default function Terms() {
   return (
     <section
-      className="bg-primary rounded-60px py-20 min-h-screen"
+      className="scroll-mt-48 bg-primary rounded-60px py-20 min-h-screen"
       dir="ltr"
       lang="en"
     >

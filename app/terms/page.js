@@ -7,7 +7,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 const Terms = () => {
   return (
     <section
-      className="mx-auto px-6 py-8 bg-[linear-gradient(135deg,#F8FAFC_0%,rgba(239,246,255,0.3)_100%)]"
+      className="scroll-mt-48 mx-auto px-6 py-8 bg-[linear-gradient(135deg,#F8FAFC_0%,rgba(239,246,255,0.3)_100%)]"
       lang="ar"
       dir="rtl"
     >
