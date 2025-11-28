@@ -16,8 +16,8 @@ const Footer = () => {
       title: "عن مؤتمت",
       links: [
         { label: "من نحن", href: "/about" },
-        { label: "الاسئلة الشائعة", href: "#faqSec" },
-        { label: "الشروط والأحكام", href: "/terms" },
+        { label: "شروط الاستخدام", href: "/terms" },
+        { label: "شروط الخصوصية", href: "/privacy" },
         { label: "المدونة", href: "/#" },
         { label: "الأسعار", href: "#packages" },
         { label: "المزايا", href: "/#" },
