@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
-const CustomerSupportCard = ({ icon: Icon, title, description, linkHref }) => {
+const CustomerSupportCard = ({ icon: Icon, title, description, linkHref="#" }) => {
   return (
     <div className="">
       <div className="size-[66px] bg-black rounded-full center_flex  text-white mb-9">

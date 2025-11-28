@@ -7,7 +7,7 @@ const packagesData = [
     name: "باقة كير",
     price: 189,
     period: "30 يوم",
-    href: "#", // Link for this package
+    href: "https://chat.moatmt.sa/app/login", // Link for this package
     badgeMostWanted: false,
     highlightBorder: false,
     description:
@@ -47,7 +47,7 @@ const packagesData = [
     name: " باقة سبّورت",
     price: 575,
     period: "30 يوم",
-    href: "#special", // Link for this package
+    href: "https://chat.moatmt.sa/app/login", // Link for this package
     badgeMostWanted: true,
     highlightBorder: true,
     description:
@@ -85,7 +85,7 @@ const packagesData = [
     name: " باقة كونكت",
     price: 1.15,
     period: "30 يوم",
-    href: "#again",
+    href: "https://chat.moatmt.sa/app/login", // Link for this package
     badgeMostWanted: false,
     highlightBorder: false,
     description:
@@ -123,7 +123,7 @@ const packagesData = [
 
 const Packages = () => {
   return (
-    <section className=" sm:my-28 my-12  sm:py-16 py-8 rounded-60px  ">
+    <section  id="packages" className="scroll-mt-14 sm:my-28 my-12  sm:py-16 py-8 rounded-60px  ">
       <div className="container">
         <div className="flex justify-center text-center mb-16">
           <div>
@@ -235,7 +235,8 @@ const Packages = () => {
                   <Link
                     href={pkg.href}
                     className="btn btn-primary w-full flex items-center justify-between h-[70px] rounded-11px font-bold text-24px"
-                  >
+                    target="_blank"
+                 >
                     إشتــــرك الان
                     <div className="size-11 center_flex bg-white rounded-full ">
                       <GoArrowUpLeft className="text-primary size-6" />

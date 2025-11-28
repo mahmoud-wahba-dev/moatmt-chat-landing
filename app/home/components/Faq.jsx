@@ -37,7 +37,7 @@ const faqs = [
 
 const Faq = () => {
   return (
-    <section className="sm:my-28 my-12  sm:py-16 py-8  bg-white rounded-44px py-16">
+    <section id="faqSec" className="scroll-mt-14 sm:my-28 my-12  sm:py-16 py-8  bg-white rounded-44px py-16">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-24  ">
           <div className="lg:col-span-4">

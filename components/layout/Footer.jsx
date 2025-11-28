@@ -15,44 +15,44 @@ const Footer = () => {
     {
       title: "عن مؤتمت",
       links: [
-        { label: "من نحن", href: "#" },
-        { label: "الاسئلة الشائعة", href: "#" },
+        { label: "من نحن", href: "/about" },
+        { label: "الاسئلة الشائعة", href: "#faqSec" },
         { label: "الشروط والأحكام", href: "/terms" },
-        { label: "المدونة", href: "/blog" },
-        { label: "الأسعار", href: "#" },
-        { label: "المزايا", href: "#" },
+        { label: "المدونة", href: "/#" },
+        { label: "الأسعار", href: "#packages" },
+        { label: "المزايا", href: "/#" },
       ],
     },
     {
       title: "منتجات مؤتمت",
       links: [
-        { label: "مؤتمت بوت", href: "#" },
-        { label: "مؤتمت شات المؤسسي", href: "#" },
-        { label: "ثيمات مؤتمت", href: "#" },
-        { label: "نوتس للتسويق النفسي", href: "#" },
-        { label: "كونكتلي", href: "#" },
-        { label: "زيا", href: "#" },
+        { label: "مؤتمت بوت", href: "/#" },
+        { label: "مؤتمت شات المؤسسي", href: "/#" },
+        { label: "ثيمات مؤتمت", href: "/#" },
+        { label: "نوتس للتسويق النفسي", href: "/#" },
+        { label: "كونكتلي", href: "/#" },
+        { label: "زيا", href: "/#" },
       ],
     },
     {
       title: "الخدمات المساندة",
       links: [
-        { label: "الخدمات المصغرة", href: "#" },
-        { label: "أكاديمية مؤتمت", href: "#" },
-        { label: "مركز المساعدة", href: "#" },
-        { label: "مجتمع مؤتمت فالواتساب", href: "#" },
-        { label: "التسويق بالعمولة", href: "#" },
+        { label: "الخدمات المصغرة", href: "/#" },
+        { label: "أكاديمية مؤتمت", href: "/#" },
+        { label: "مركز المساعدة", href: "/#" },
+        { label: "مجتمع مؤتمت فالواتساب", href: "/#" },
+        { label: "التسويق بالعمولة", href: "/#" },
       ],
     },
   ];
 
   const socialLinks = [
-    { href: "#", label: "Facebook", icon: FaFacebook },
-    { href: "#", label: "Instagram", icon: FaInstagram },
-    { href: "#", label: "Tiktok", icon: FaTiktok },
-    { href: "#", label: "Twitter", icon: FaXTwitter },
+    { href: "https://www.facebook.com/share/1JR3fKCLS4/?mibextid=wwXIfr", label: "Facebook", icon: FaFacebook },
+    { href: "https://www.instagram.com/moatmt.sa?igsh=MTA3NHF2ZWpyMzZkZw%3D%3D", label: "Instagram", icon: FaInstagram },
+    { href: "https://www.tiktok.com/@moatmt.sa?_t=ZS-90WDjBNwJe5&_r=1", label: "Tiktok", icon: FaTiktok },
+    { href: "https://x.com/moatmt?s=21", label: "Twitter", icon: FaXTwitter },
     { href: "#", label: "LinkedIn", icon: FaLinkedin },
-    { href: "#", label: "Snapchat", icon: FaSnapchatGhost },
+    { href: "https://www.snapchat.com/@moatmt.sa?sid=4daf2bfdbadf41519afc1d8fd6586463&share_id=BJAL3k5yS6GdLCQvmUpHbA&invite_id=B2EMS1LI", label: "Snapchat", icon: FaSnapchatGhost },
   ];
   return (
     <footer className=" text-black px-5 lg:px-20 pt-10 pb-6">
@@ -91,6 +91,7 @@ const Footer = () => {
                 key={label}
                 aria-label={label}
                 className="bg-primary size-12 flex items-center justify-center rounded-full"
+                target="_blank"
               >
                 <IconComponent className="text-white size-4" />
               </Link>
