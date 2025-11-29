@@ -83,7 +83,7 @@ const packagesData = [
   },
   {
     name: " باقة كونكت",
-    price: 1.15,
+    price: "1.150",
     period: "30 يوم",
     href: "https://chat.moatmt.sa/app/login", // Link for this package
     badgeMostWanted: false,

@@ -8,8 +8,8 @@ const Navbar = () => {
     <nav className=" text-black  sticky top-0 z-50 bg-white ">
       <div className="container max-w-full">
         <div className="navbar  max-sm:justify-between">
-          <Link className="navbar-start" href="/">
-            <Image src="/logo.svg" alt="Logo" width={298} height={99} />
+          <Link className="navbar-start h-[100px] "  href="/">
+            <Image src="/logo.svg" alt="Logo" width={298} height={99} className="" />
           </Link>
           <div className="navbar-center">
             <div className="navbar-center hidden sm:flex">

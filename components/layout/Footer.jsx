@@ -74,8 +74,14 @@ const Footer = () => {
     <footer className=" text-black px-5 lg:px-20 pt-10 pb-6">
       <div className="footer grid grid-cols-1 sm:grid-cols-12  sm:footer-horizontal  text-white ">
         <aside className="sm:col-span-4 md:col-span-5 space-y-4">
-          <div>
-            <Image src="/logo.svg" alt="Logo Footer" width={352} height={101} />
+          <div className="h-[117px] w-[352px] ">
+            <Image
+              src="/logo.svg"
+              alt="Logo Footer"
+              width={400}
+              height={117}
+              className="h-full w-full object-cover"
+            />
           </div>
           <p className="sm:w-[74%] text-black font-medium text-22px leading-8">
             منصة موحدة لخدمة العملاء جمعت لك مختلف وسائل التواصل بمكان
